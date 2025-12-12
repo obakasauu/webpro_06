@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>スーパー一覧</title></head>
+<body>
+
+<h2>スーパー一覧</h2>
+
+<a href="/super/create">新規追加</a>
+<br><br>
+
+<table border="1">
+<tr><th>ID</th><th>店名</th><th>住所</th><th>操作</th></tr>
+
+<% data.forEach((item, i) => { %>
+<tr>
+  <td><%= item.id %></td>
+  <td><a href="/super/detail/<%= i %>"><%= item.name %></a></td>
+  <td><%= item.address %></td>
+  <td>
+    <a href="/super/edit/<%= i %>">編集</a> |
+    <a href="/super/delete/<%= i %>">削除</a>
+  </td>
+</tr>
+<% }) %>
+
+</table>
+
+</body>
+</html>

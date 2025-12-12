@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title><%= data.name %> 編集</title></head>
+<body>
+
+<h2><%= data.name %> を編集</h2>
+
+<form method="POST" action="/karaoke/update/<%= id %>">
+
+<table border="1">
+<tr><th>項目</th><th>入力</th></tr>
+
+<tr><td>店名</td><td><input type="text" name="name" value="<%= data.name %>"></td></tr>
+<tr><td>住所</td><td><input type="text" name="address" value="<%= data.address %>"></td></tr>
+<tr><td>営業時間</td><td><input type="text" name="openHours" value="<%= data.openHours %>"></td></tr>
+<tr><td>部屋数</td><td><input type="number" name="rooms" value="<%= data.rooms %>"></td></tr>
+<tr><td>料金(1h)</td><td><input type="number" name="price" value="<%= data.price %>"></td></tr>
+
+</table>
+
+<br>
+<button type="submit">更新する</button>
+
+</form>
+
+<br>
+<a href="/karaoke">一覧に戻る</a>
+
+</body>
+</html>

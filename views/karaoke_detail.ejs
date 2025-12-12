@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title><%= data.name %></title></head>
+<body>
+
+<h2><%= data.name %> の詳細</h2>
+
+<table border="1">
+<tr><th>項目</th><th>データ</th></tr>
+
+<tr><td>ID</td><td><%= data.id %></td></tr>
+<tr><td>住所</td><td><%= data.address %></td></tr>
+<tr><td>営業時間</td><td><%= data.openHours %></td></tr>
+<tr><td>部屋数</td><td><%= data.rooms %></td></tr>
+<tr><td>料金(1h)</td><td><%= data.price %>円</td></tr>
+
+</table>
+
+<br>
+<a href="/karaoke">一覧に戻る</a>
+
+</body>
+</html>

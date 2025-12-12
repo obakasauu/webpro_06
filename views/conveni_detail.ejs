@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title><%= data.name %></title></head>
+<body>
+
+<h2><%= data.name %> の詳細</h2>
+
+<table border="1">
+<tr><th>項目</th><th>データ</th></tr>
+
+<tr><td>ID</td><td><%= data.id %></td></tr>
+<tr><td>ブランド</td><td><%= data.brand %></td></tr>
+<tr><td>住所</td><td><%= data.address %></td></tr>
+<tr><td>24時間営業</td><td><%= data.open24h ? "はい" : "いいえ" %></td></tr>
+<tr><td>ATM</td><td><%= data.atm ? "あり" : "なし" %></td></tr>
+
+</table>
+
+<br>
+<a href="/conveni">一覧に戻る</a>
+
+</body>
+</html>

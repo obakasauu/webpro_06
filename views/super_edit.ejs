@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title><%= data.name %> 編集</title></head>
+<body>
+
+<h2><%= data.name %> を編集</h2>
+
+<form method="POST" action="/super/update/<%= id %>">
+
+<table border="1">
+<tr><th>項目</th><th>入力</th></tr>
+
+<tr><td>店名</td><td><input type="text" name="name" value="<%= data.name %>"></td></tr>
+<tr><td>住所</td><td><input type="text" name="address" value="<%= data.address %>"></td></tr>
+<tr><td>営業時間</td><td><input type="text" name="openHours" value="<%= data.openHours %>"></td></tr>
+
+<tr><td>駐車場</td>
+<td>
+<select name="parking">
+  <option value="true" <%= data.parking ? "selected" : "" %>>あり</option>
+  <option value="false" <%= !data.parking ? "selected" : "" %>>なし</option>
+</select>
+</td></tr>
+
+<tr><td>売場面積</td><td><input type="number" name="floorArea" value="<%= data.floorArea %>"></td></tr>
+
+</table>
+
+<br>
+<button type="submit">更新する</button>
+
+</form>
+
+<br>
+<a href="/super">一覧に戻る</a>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>コンビニ追加</title></head>
+<body>
+
+<h2>コンビニを追加</h2>
+
+<form method="POST" action="/conveni/create">
+
+<table border="1">
+<tr><th>項目</th><th>入力</th></tr>
+
+<tr><td>店名</td><td><input type="text" name="name"></td></tr>
+<tr><td>ブランド</td><td><input type="text" name="brand"></td></tr>
+<tr><td>住所</td><td><input type="text" name="address"></td></tr>
+
+<tr><td>24時間営業</td>
+<td>
+<select name="open24h">
+  <option value="true">はい</option>
+  <option value="false">いいえ</option>
+</select>
+</td></tr>
+
+<tr><td>ATM</td>
+<td>
+<select name="atm">
+  <option value="true">あり</option>
+  <option value="false">なし</option>
+</select>
+</td></tr>
+
+</table>
+
+<br>
+<button type="submit">追加する</button>
+
+</form>
+
+<br>
+<a href="/conveni">一覧に戻る</a>
+
+</body>
+</html>

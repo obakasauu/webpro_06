@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title><%= data.name %></title></head>
+<body>
+
+<h2><%= data.name %> の詳細</h2>
+
+<table border="1">
+<tr><th>項目</th><th>データ</th></tr>
+
+<tr><td>ID</td><td><%= data.id %></td></tr>
+<tr><td>住所</td><td><%= data.address %></td></tr>
+<tr><td>営業時間</td><td><%= data.openHours %></td></tr>
+<tr><td>駐車場</td><td><%= data.parking ? "あり" : "なし" %></td></tr>
+<tr><td>売場面積</td><td><%= data.floorArea %> ㎡</td></tr>
+
+</table>
+
+<br>
+<a href="/super">一覧に戻る</a>
+
+</body>
+</html>
